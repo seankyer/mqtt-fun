@@ -27,7 +27,7 @@ async fn main() {
     });
 
     // Clear retained message and publish online status
-    client.publish("sensors/temperature", QoS::AtLeastOnce, false, "").await.unwrap();
+    client.publish("sensors/temperature", QoS::AtLeastOnce, true, "").await.unwrap();
     client.publish("devices/device1/status", QoS::AtLeastOnce, true, "online").await.unwrap();
 
     loop {

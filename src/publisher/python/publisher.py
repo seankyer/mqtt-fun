@@ -17,7 +17,7 @@ client.connect(broker)
 client.loop_start()
 
 # Clear retained message and declare online
-client.publish(topic, "", qos=1, retain=False)
+client.publish(topic, "", qos=1, retain=True)
 client.publish(lwt, "online", qos=1, retain=True)
 
 # Enter sensor loop

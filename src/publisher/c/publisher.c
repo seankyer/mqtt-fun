@@ -44,7 +44,7 @@ int main(int argc, char* argv[]) {
     }
 
     // Clear retained message on temperature topic (publish empty retained)
-    MQTTClient_publish(client, TOPIC, 0, "", QOS, 0, NULL);
+    MQTTClient_publish(client, TOPIC, 0, "", QOS, 1, NULL);
 
     // Publish "online" status retained message on LWT topic
     MQTTClient_publish(client, LWT_TOPIC, strlen("online"), "online", QOS, 1, NULL);
