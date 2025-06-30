@@ -38,3 +38,9 @@ pip install -r requirements.txt
 sudo apt update
 sudo apt install libpaho-mqtt-dev
 ```
+### Install Rust
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source $HOME/.cargo/env
+```
+
